@@ -1,0 +1,31 @@
+{
+  "name": "react-onml",
+  "version": "0.1.0",
+  "description": "React to JsonML object renderer",
+  "main": "lib/",
+  "scripts": {
+    "test": "eslint lib/*.js && mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drom/react-onml.git"
+  },
+  "keywords": [
+    "react",
+    "jsonml"
+  ],
+  "author": "Aliaksei Chapyzhenka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drom/react-onml/issues"
+  },
+  "homepage": "https://github.com/drom/react-onml#readme",
+  "devDependencies": {
+    "eslint": "^2",
+    "flow-bin": "^0.46.0",
+    "jsof": "^0.3.0",
+    "mocha": "^3.4.1",
+    "react": "16.0.0-alpha.6",
+    "react-dom": "16.0.0-alpha.6"
+  }
+}
