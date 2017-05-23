@@ -19,11 +19,11 @@ var T1 = function (props) {
 describe('basic', function () {
 
     it('t1', function (done) {
-        var res = [];
+        var res = ['root', {}];
         ReactOnml.render(
             $(T1, { foo: 'bar' }),
-            function (root) {
-                console.log(jsof.stringify(root));
+            function () {
+                console.log(jsof.stringify(res));
                 done();
             },
             res
