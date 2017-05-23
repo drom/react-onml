@@ -6,14 +6,31 @@ var ReactOnml = require('../lib'),
 
 var $ = React.createElement;
 
+var T1 = function (props) {
+    return $('span', props,
+        $('div', {},
+            $('title', {}, props.foo),
+            'text2'
+        ),
+        'text1'
+    );
+};
+
 describe('basic', function () {
 
     it('t1', function (done) {
-        var el = $('div', {});
-        var res = {};
-        ReactOnml.render(el);
+        var res = [];
+        ReactOnml.render(
+            $(T1, { foo: 'bar' }),
+            function (root) {
+                console.log(jsof.stringify(root));
+                done();
+            },
+            res
+        );
         ReactOnml.flush();
-        console.log(jsof.stringify(res));
-        done();
     });
 });
+
+/* eslint-env mocha */
+/* eslint no-console: 1 */
